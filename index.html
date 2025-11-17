@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru" data-time="auto" data-mood="rock">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SubMus - Живой Сайт Музыкальных Субкультур</title>
+  <meta name="description" content="Погрузитесь в мир музыкальных субкультур. Сайт, который живет и меняется вместе с вами" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="sr-only" href="#main">Перейти к основному содержимому</a>
+
+  
+  <header id="header">
+    <nav class="container" aria-label="Главная навигация">
+      <div class="nav-left">
+        <div class="logo" aria-label="SubMus">
+          <div class="logo-icon" aria-hidden="true">
+            <i class="ri-music-2-fill"></i>
+          </div>
+          <h1>SubMus</h1>
+        </div>
+        <ul class="nav-links" role="list">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#bands">Группы</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#events">События</a></li>
+        </ul>
+      </div>
+
+      <div class="controls">
+        
+        <div class="select-wrap" title="Время суток">
+          <select class="select" id="timeSelect" aria-label="Выбор времени суток">
+            <option value="auto">Авто</option>
+            <option value="morning">Утро</option>
+            <option value="day">День</option>
+            <option value="evening">Вечер</option>
+            <option value="night">Ночь</option>
+          </select>
+          <i class="ri-time-line" aria-hidden="true"></i>
+        </div>
+
+       
+        <div class="mood-controls" role="group" aria-label="Настроение сайта">
+          <button class="mood-btn" data-mood="emo" title="Emo/Scene" aria-pressed="false">
+            <i class="ri-heart-line"></i>
+            <span class="mood-label">Emo/Scene</span>
+          </button>
+          <button class="mood-btn active" data-mood="rock" title="Rock" aria-pressed="true">
+            <i class="ri-flashlight-line"></i>
+            <span class="mood-label">Rock</span>
+          </button>
+          <button class="mood-btn" data-mood="blackmetal" title="Black Metal" aria-pressed="false">
+            <i class="ri-skull-line"></i>
+            <span class="mood-label">Black Metal</span>
+          </button>
+        </div>
+      </div>
+
+      <button class="mobile-toggle" aria-expanded="false" aria-controls="mobileMenu" title="Меню">
+        <i class="ri-menu-line"></i>
+      </button>
+    </nav>
+
+ 
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <div class="container">
+        <ul class="nav-links" role="list">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#bands">Группы</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#events">События</a></li>
+          <li><a href="#about">О проекте</a></li>
+        </ul>
+        <div class="mood-controls mobile-mood" role="group" aria-label="Настроение (моб.)">
+          <button class="mood-btn" data-mood="emo" title="Emo/Scene">
+            <i class="ri-heart-line"></i>
+          </button>
+          <button class="mood-btn" data-mood="rock" title="Rock">
+            <i class="ri-flashlight-line"></i>
+          </button>
+          <button class="mood-btn" data-mood="blackmetal" title="Black Metal">
+            <i class="ri-skull-line"></i>
+          </button>
+        </div>
+        <div class="time-controls mobile-time" role="group" aria-label="Время суток (моб.)">
+          <select class="select" id="timeSelectMobile" aria-label="Выбор времени суток">
+          <option value="auto">Авто</option>
+          <option value="morning">Утро</option>
+          <option value="day">День</option>
+          <option value="evening">Вечер</option>
+          <option value="night">Ночь</option>
+          </select>
+</div>
+
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="hero" aria-label="Главный экран">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <div class="hero-content reveal">
+      <div class="hero-icon" aria-hidden="true">
+        <i class="ri-music-2-fill"></i>
+      </div>
+      <h2 id="heroTitle">SubMus</h2>
+      <p id="heroSubtitle">Погрузитесь в мир рока и альтернативных субкультур.<br>Энергия и свобода выражения</p>
+      <div class="hero-buttons">
+        <a href="#bands" class="btn">
+          <i class="ri-play-circle-line"></i> 
+          <span>Исследовать Музыку</span>
+        </a>
+        <a href="#gallery" class="btn btn-outline">
+          <i class="ri-gallery-line"></i> 
+          <span>Галерея Субкультур</span>
+        </a>
+      </div>
+      
+ 
+      <div class="mood-indicator" id="moodIndicator">
+        <i class="ri-flashlight-line"></i>
+        <span>Rock настроение</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <i class="ri-arrow-down-line"></i>
+    </div>
+  </section>
+
+
+  <div class="container page-grid" id="main">
+    <main>
+   
+      <section id="bands" aria-labelledby="bands-title">
+        <div class="section-header reveal">
+          <h2 id="bands-title">
+            <span id="bandsSpan">ЛЕГЕНДАРНЫЕ</span><br>ГРУППЫ
+          </h2>
+          <p id="bandsDesc">Исследуйте музыку, которая определила рок-культуру</p>
+        </div>
+  
+        
+        <div class="bands-grid" id="bandsGrid" aria-live="polite"></div>
+      </section>
+
+     
+      <section id="gallery" aria-labelledby="gallery-title">
+        <div class="section-header reveal">
+          <h2 id="gallery-title">
+            <span id="gallerySpan">ROCK КУЛЬТУРА</span><br>ГАЛЕРЕЯ
+          </h2>
+          <p id="galleryDesc">Классическая эстетика рок-субкультур</p>
+        </div>
+        
+       
+        
+        <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+      </section>
+
+     
+      <section id="events" aria-labelledby="events-title">
+        <div class="section-header reveal">
+          <h2 id="events-title">
+            <span id="eventsSpan">ROCK СОБЫТИЯ</span><br>КОНЦЕРТЫ
+          </h2>
+          <p id="eventsDesc">Не пропустите лучшие рок-концерты и фестивали</p>
+        </div>
+        
+        <div class="events-grid" id="eventsGrid" aria-live="polite"></div>
+      </section>
+
+
+      
+
+    </main>
+
+   
+    <aside class="desktop-rail" aria-label="Дополнительно">
+    
+      
+      <div class="rail-card">
+        <div class="rail-title">
+          <i class="ri-palette-line"></i> 
+          <span>Быстрые действия</span>
+        </div>
+        <div class="rail-actions">
+          <button class="btn btn-small" id="randomizeMood">
+            <i class="ri-shining-2-line"></i> 
+            <span>Случайная субкультура</span>
+          </button>
+          <button class="btn btn-small btn-outline" id="toggleRevealDemo">
+            <i class="ri-eye-line"></i> 
+            <span>Показать анимации</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="rail-stats">
+        <div class="stat-item">
+          <div class="stat-value" id="statBands">6</div>
+          <div class="stat-label">Групп</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="statEvents">4</div>
+          <div class="stat-label">Событий</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <div class="logo">
+            <div class="logo-icon">
+              <i class="ri-music-2-fill"></i>
+            </div>
+            <h3>SubMus</h3>
+          </div>
+          <p class="footer-desc">Ваш проводник в мир музыкальных субкультур. Живой сайт, который меняется вместе с вами.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <i class="ri-youtube-line"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Spotify">
+              <i class="ri-spotify-line"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Telegram">
+              <i class="ri-telegram-line"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#bands">Группы</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#events">События</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Субкультуры</h4>
+          <div class="genre-tags">
+            <span class="genre-tag">Emo/Scene</span>
+            <span class="genre-tag">Rock</span>
+            <span class="genre-tag">Black Metal</span>
+            <span class="genre-tag">Grunge</span>
+            <span class="genre-tag">Alternative</span>
+            <span class="genre-tag">Punk</span>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Контакты</h4>
+          <div class="footer-contacts">
+            <div class="contact-item">
+              <i class="ri-mail-line"></i> 
+              <span>romanchick1100@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="ri-phone-line"></i> 
+              <span>+7 708 696 2150</span>
+            </div>
+            <div class="contact-item">
+              <i class="ri-map-pin-line"></i> 
+              <span>Алматы, Казахстан</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 SubMus. Все права защищены. Живой сайт музыкальных субкультур.</p>
+        <div class="footer-tech">
+          <span>Поставьте мне 5 пж я старался</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ 
+  <div class="modal-backdrop" id="bandModal" role="dialog" aria-modal="true" aria-labelledby="bandModalTitle">
+    <div class="modal" role="document">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="ri-album-line"></i>
+          <span id="bandModalTitle">Группа</span>
+        </div>
+        <button class="mood-btn modal-close" id="modalClose" aria-label="Закрыть">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="overview" role="tab" aria-selected="true">
+            <i class="ri-information-line"></i> Обзор
+          </button>
+          <button class="tab" data-tab="albums" role="tab" aria-selected="false">
+            <i class="ri-disc-line"></i> Альбомы
+          </button>
+          <button class="tab" data-tab="live" role="tab" aria-selected="false">
+            <i class="ri-live-line"></i> Лайвы
+          </button>
+        </div>
+        
+        <div id="tab-overview" class="tab-panel">
+          <p id="bandDesc" class="band-description"></p>
+          <div class="band-stats-grid">
+            <div class="band-stat">
+              <i class="ri-calendar-line"></i> 
+              <div>
+                <span class="stat-label">Основана</span>
+                <span class="stat-value" id="bandYear"></span>
+              </div>
+            </div>
+            <div class="band-stat">
+              <i class="ri-user-line"></i> 
+              <div>
+                <span class="stat-label">Участники</span>
+                <span class="stat-value" id="bandMembers"></span>
+              </div>
+            </div>
+            <div class="band-stat">
+              <i class="ri-music-2-line"></i> 
+              <div>
+                <span class="stat-label">Жанр</span>
+                <span class="stat-value" id="bandGenre"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="tab-albums" class="tab-panel" hidden>
+          <div id="bandAlbums" class="album-tags"></div>
+        </div>
+        
+        <div id="tab-live" class="tab-panel" hidden>
+          <p class="tab-placeholder">Скоро: подборка лучших лайв-выступлений и концертных записей.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="./script.js"></script>
+</body>
+</html>
