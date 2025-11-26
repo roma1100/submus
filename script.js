@@ -10,8 +10,8 @@ const contentByMood = {
       description: 'Откройте для себя группы, которые выражают чувства',
       data: [
         { name: 'My Chemical Romance', genre: 'emo', description: 'Легенды эмо-рока', year: 2001, members: 5, albums: ['Three Cheers for Sweet Revenge', 'The Black Parade', 'Danger Days'],  image: 'https://www.rollingstone.com/wp-content/uploads/2024/06/My-Chemical-Romance-throwback.jpg?w=1581&h=1054&crop=1'},
-        { name: 'Fall Out Boy', genre: 'emo', description: 'Поп-панк с эмоциями', year: 2001, members: 4, albums: ['From Under the Cork Tree', 'Infinity on High', 'Folie à Deux'], image: 'https://static.wikia.nocookie.net/lessthanjake/images/7/7f/Fall_Out_Boy.jpg/revision/latest?cb=20090202072855' },
-        { name: 'Panic! At The Disco', genre: 'emo', description: 'Театральный эмо-рок', year: 2004, members: 1, albums: ['A Fever You Can\'t Sweat Out', 'Pretty. Odd.', 'Vices & Virtues'], image: 'https://static.wikia.nocookie.net/singmovie/images/6/67/Panic_at_the_disco.jpg/revision/latest?cb=20190808222356' },
+        { name: 'Fall Out Boy', genre: 'emo', description: 'Поп-панк с эмоциями', year: 2001, members: 4, albums: ['From Under the Cork Tree', 'Infinity on High', 'Folie à Deux'], image: 'https://www.rollingstone.com/wp-content/uploads/2018/06/rs-9682-fob-624x420-1361473110.jpg?w=624&h=422&crop=1' },
+        { name: 'Panic! At The Disco', genre: 'emo', description: 'Театральный эмо-рок', year: 2004, members: 1, albums: ['A Fever You Can\'t Sweat Out', 'Pretty. Odd.', 'Vices & Virtues'], image: 'https://www.rollingstone.com/wp-content/uploads/2018/06/rs-9577-20130214-panic-at-the-disco-624x420-1360864744.jpg' },
         { name: 'Paramore', genre: 'emo', description: 'Энергичный эмо-панк', year: 2004, members: 3, albums: ['Riot!', 'Brand New Eyes', 'Paramore'], image: 'https://i8.amplience.net/i/naras/paramore_MI0004238738-MN0000366681' },
         { name: 'Taking Back Sunday', genre: 'emo', description: 'Классический эмо-звук', year: 1999, members: 5, albums: ['Tell All Your Friends', 'Where You Want to Be', 'Louder Now'], image:'https://www.mm-group.org/wp-content/uploads/2016/08/TakingBackSunday_01.jpg' },
         { name: 'The Used', genre: 'emo', description: 'Сырой эмоциональный панк', year: 2001, members: 4, albums: ['The Used', 'In Love and Death', 'Lies for the Liars'], image:'https://upload.wikimedia.org/wikipedia/commons/7/72/The_Used_January_2021.jpg' }
@@ -729,5 +729,6 @@ if (timeSelectMobile) {
   timeSelectMobile.value = localStorage.getItem('submus-time') || 'auto';
   timeSelectMobile.addEventListener('change', () => setTimeOfDay(timeSelectMobile.value));
 }
+
 
 
